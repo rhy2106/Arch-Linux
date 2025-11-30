@@ -1,0 +1,6 @@
+polybar main_bar &
+feh --bg-fill ~/Images/background.jpg &
+picom &
+export PATH="$HOME/.local/bin:$PATH"
+battery_notify &
+setxkbmap -layout br &

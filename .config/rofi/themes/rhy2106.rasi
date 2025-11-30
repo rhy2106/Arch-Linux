@@ -1,0 +1,70 @@
+* {
+	inv: #00000000;
+	bg: #000000cc;
+	fg1: #88ffff77;
+	fg2: #22a2a277;
+	tx: #ffffff;
+	seltx: #363699;
+	border-radius: 16px;
+    margin: 6px;
+
+	scrollbar: true;
+
+    color: @tx;
+    font: "Terminess Nerd Font Mono 12";
+}
+
+#scrollbar {
+	width:5px;
+	handle-width: 5px;
+	background-color: @fg1;
+}
+
+window {
+	background-color: @bg;
+	height: 400px;
+    width: 500px;
+	border: 2px;
+	border-color: @fg2;
+}
+
+mainbox {
+	background-color: @inv;
+}
+
+inputbar {
+	background-color: @fg1;
+	spacing: 5px;
+	children: [entry];
+}
+
+entry {
+	padding: 0px 5px 0px 5px;
+	border-radius: 0px;
+	background-color: @inv;
+}
+
+listview {
+	background-color: @fg1;
+}
+
+message {
+	background-color: @fg2;
+}
+
+element {
+	background-color: @fg2;
+	children: [element-text, element-icon];
+	border-radius: 10px;
+}
+
+element selected {
+	background-color: @fg1;
+}
+
+element-text, element-icon {
+	background-color: @inv;
+}
+element-text selected {
+	color:@seltx;
+}

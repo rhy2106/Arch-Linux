@@ -1,0 +1,6 @@
+[window]
+    opacity = 0.80
+[font]
+	normal = { family = "Terminess Nerd Font"}
+	size = 11
+
