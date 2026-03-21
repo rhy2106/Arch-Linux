@@ -1,13 +1,11 @@
 * {
 	inv: #00000000;
-	bg: #000000cc;
-	fg1: #88ffff77;
-	fg2: #22a2a277;
-	tx: #ffffff;
-	seltx: #363699;
-	border-radius: 16px;
-    margin: 6px;
-
+	bg: #222222cc;
+	fg1: #ffffff77;
+	fg2: #dddddd77;
+	tx: #000000;
+	seltx: #0000dd;
+	margin: 3px;
 	scrollbar: true;
 
     color: @tx;
@@ -22,9 +20,8 @@
 
 window {
 	background-color: @bg;
-	height: 400px;
-    width: 500px;
-	border: 2px;
+	height: 350px;
+    width: 450px;
 	border-color: @fg2;
 }
 
@@ -54,8 +51,7 @@ message {
 
 element {
 	background-color: @fg2;
-	children: [element-text, element-icon];
-	border-radius: 10px;
+	children: [element-icon, element-text];
 }
 
 element selected {
