@@ -1,5 +1,0 @@
-#! /bin/bash
-
-cd $PWD
-
-fzf --preview='bat --color=always {}' | xargs -o cat | xclip -selection clipboard

@@ -1,7 +1,0 @@
-#! /bin/bash
-
-LIBPATH="$HOME/Documents/codigos"
-
-cd $LIBPATH
-
-make
