@@ -1,0 +1,17 @@
+#! /bin/bash
+
+LIBPATH="$HOME/Documents/codigos"
+
+cd $LIBPATH
+
+ARQUIVO=$(fzf --preview='bat --color=always {}')
+if [ -z $ARQUIVO ]; then
+	echo '// open cancelado arquivo não existe'
+elif [[ $ARQUIVO == *cancel* ]]; then
+	echo '// open cancelado'
+elif [ "$1" = '-g' ]; then
+	gedit $ARQUIVO
+else
+	vim $ARQUIVO
+fi
+

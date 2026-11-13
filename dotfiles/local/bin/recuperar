@@ -1,0 +1,16 @@
+#! /bin/bash
+
+LIBPATH="$HOME/Documents/codigos"
+
+cd "$LIBPATH/backup"
+
+ARQUIVO=$(basename $(fzf --preview 'bat --color=always {}' | cut -d '.' -f1))
+
+echo $ARQUIVO
+
+cd "$LIBPATH/src"
+cp "$LIBPATH/backup/$ARQUIVO.cpp" .
+cd "$LIBPATH/test"
+touch "$ARQUIVO.in"
+touch "$ARQUIVO.exp"
+

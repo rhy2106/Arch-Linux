@@ -1,0 +1,40 @@
+call plug#begin()
+
+Plug 'mattn/emmet-vim'
+Plug 'SirVer/ultisnips'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'takac/vim-hardtime'
+
+call plug#end()
+
+set number
+set relativenumber
+set tabstop=4
+set shiftwidth=4
+set ai 
+set si
+set scrolloff=999
+filetype plugin indent on
+syntax on
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsEditSplit="vertical"
+
+" let g:hardtime_default_on = 1
+
+set ttimeoutlen=50
+
+let &t_SI = "\e[5 q"
+let &t_EI = "\e[2 q"
+
+color custom
+
+nnoremap ff :FZF<CR>
+nmap <leader>a ysiw'
+nmap <leader>da ysiw"
+xmap <leader>da S"
+

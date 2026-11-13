@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo mount -t vfat /dev/sda /mnt/pendrive \
+-o uid=$(id -u),gid=$(id -g),umask=022
+

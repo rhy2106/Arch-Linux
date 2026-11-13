@@ -1,0 +1,24 @@
+#!/bin/bash
+
+LIMIT=20
+
+BAT=/sys/class/power_supply/BAT0/capacity
+STATUS=/sys/class/power_supply/BAT0/status
+
+if [[ ! -f "$BAT" ]]; then
+	BAT=/sys/class/power_supply/BAT1/capacity
+	STATUS=/sys/class/power_supply/BAT1/status
+fi
+
+while true; do
+	PERC=$(cat "$BAT")
+	STAT=$(cat "$STATUS")
+	if [[ "$STAT" == "Discharging" ]] && (( PERC <= LIMIT )); then
+		notify-send -a battery_low "Battery Low" "Battery at ${PERC}%"
+	fi
+	if (( PERC >= 95)); then
+		notify-send -a battery_full "Battery Full" "Battery at ${PERC}%"
+	fi
+	sleep 60
+done
+

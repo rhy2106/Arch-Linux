@@ -1,0 +1,6 @@
+
+// @theme "/usr/share/rofi/themes/solarized.rasi"
+
+// @theme "/home/rafel/.local/share/rofi/themes/spotlight.rasi"
+
+@theme "./themes/rhy2106.rasi"
